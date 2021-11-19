@@ -77,6 +77,8 @@ export const Container = styled(motion.section)`
 export const H1 = styled.h1`
 	font-family: "Bellefair", serif;
 	font-size: 9.375rem;
+	text-transform: uppercase;
+	color: var(--third-color);
 `
 
 export const H2 = styled.h2`
@@ -98,6 +100,8 @@ export const H5 = styled.h5`
 	font-family: "Bellefair", serif;
 	font-size: 1.75rem;
 	letter-spacing: 4.75px;
+	text-transform: uppercase;
+	color: var(--second-color);
 `
 
 export const SubH1 = styled.p`
@@ -120,4 +124,5 @@ export const NavbarText = styled.p`
 
 export const DefaultText = styled.p`
 	font-size: 1rem;
+	color: var(--second-color);
 `
