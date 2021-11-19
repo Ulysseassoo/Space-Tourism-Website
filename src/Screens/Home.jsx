@@ -1,14 +1,19 @@
 import React from "react"
 import styled from "styled-components"
 import HomeBackground from "../assets/home/background-home-desktop.jpg"
+import HomeBackgroundTablet from "../assets/home/background-home-tablet.jpg"
 import HomeBackgroundMobile from "../assets/home/background-home-mobile.jpg"
 import { Container, DefaultText, H1, H5, H4 } from "../Theme/global"
+import { useNavigate } from "react-router"
 
 const Home = () => {
+	const navigate = useNavigate()
+
 	return (
 		<HomeContainer
 			image={HomeBackground}
 			mobileImage={HomeBackgroundMobile}
+			tabletImage={HomeBackgroundTablet}
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
@@ -23,7 +28,7 @@ const Home = () => {
 					</BodyText>
 				</Center>
 				<CenterEnd>
-					<Circle>
+					<Circle onClick={() => navigate("/destination")}>
 						<Text>Explore</Text>
 					</Circle>
 				</CenterEnd>
@@ -41,15 +46,32 @@ const Flex = styled.div`
 	padding: 8rem;
 	display: flex;
 	align-items: center;
+	@media screen and (max-width: 900px) {
+		flex-direction: column;
+		gap: 4rem;
+		padding: 4rem;
+	}
+	@media screen and (max-width: 600px) {
+		padding: 2rem;
+	}
+	@media screen and (max-width: 391px) {
+		padding: 1rem;
+	}
 `
 const Center = styled.div`
 	flex: 2;
+	@media screen and (max-width: 900px) {
+		text-align: center;
+	}
 `
 const CenterEnd = styled(Center)`
 	align-self: end;
 	flex: 1;
+	@media screen and (max-width: 900px) {
+		align-self: initial;
+	}
 `
-const Circle = styled.button`
+const Circle = styled.div`
 	padding: 1rem;
 	height: 200px;
 	background: white;
@@ -90,6 +112,9 @@ const Text = styled(H4)`
 const BodyText = styled(DefaultText)`
 	line-height: 1.8rem;
 	max-width: 50%;
+	@media screen and (max-width: 900px) {
+		max-width: 100%;
+	}
 `
 const TextTitle = styled(H5)`
 	margin-bottom: 2.5rem;

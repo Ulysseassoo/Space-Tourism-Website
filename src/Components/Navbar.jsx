@@ -47,6 +47,14 @@ const Container = styled.header`
 	display: flex;
 	height: 150px;
 	align-items: center;
+	@media screen and (max-width: 900px) {
+		top: 0;
+		height: initial;
+		padding: 0;
+	}
+	@media screen and (max-width: 600px) {
+		padding: 2rem 0;
+	}
 `
 
 const Logo = styled.img`
@@ -100,16 +108,20 @@ const NavLinks = styled.nav`
 	align-items: center;
 	padding: 1rem 6rem;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(0, 0, 0, 0.8);
 	z-index: 100;
 	@supports (backdrop-filter: blur(40px)) {
-		background-color: rgba(0, 0, 0, 0.4);
 		background: transparent;
 		backdrop-filter: blur(40px);
+	}
+	@media screen and (max-width: 900px) {
+		padding: 0 2rem;
+		gap: 0;
 	}
 	@media screen and (max-width: 600px) {
 		position: fixed;
 		flex-direction: column;
+		gap: 2rem;
 		inset: 0 0 0 30%;
 		padding: 0 4rem;
 		justify-content: center;
@@ -131,6 +143,12 @@ const NavLinks = styled.nav`
 const Index = styled.span`
 	color: var(--third-color);
 	padding-right: 0.5rem;
+	@media screen and (max-width: 900px) {
+		display: none;
+	}
+	@media screen and (max-width: 600px) {
+		display: block;
+	}
 `
 
 export default Navbar

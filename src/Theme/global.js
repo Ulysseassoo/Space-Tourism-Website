@@ -67,6 +67,11 @@ export const Container = styled(motion.section)`
 	min-height: 100vh;
 	background: ${({ image }) => (image ? `url(${image})` : "")};
 	background-size: cover;
+	@media screen and (max-width: 900px) {
+		background: ${({ tabletImage }) => (tabletImage ? `url(${tabletImage})` : "")};
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 	@media screen and (max-width: 600px) {
 		background: ${({ mobileImage }) => (mobileImage ? `url(${mobileImage})` : "")};
 		background-repeat: no-repeat;
@@ -79,6 +84,12 @@ export const H1 = styled.h1`
 	font-size: 9.375rem;
 	text-transform: uppercase;
 	color: var(--third-color);
+	@media screen and (max-width: 900px) {
+		font-size: 8.775rem;
+	}
+	@media screen and (max-width: 600px) {
+		font-size: 7.25rem;
+	}
 `
 
 export const H2 = styled.h2`
@@ -102,6 +113,12 @@ export const H5 = styled.h5`
 	letter-spacing: 4.75px;
 	text-transform: uppercase;
 	color: var(--second-color);
+	@media screen and (max-width: 900px) {
+		font-size: 1.25rem;
+	}
+	@media screen and (max-width: 600px) {
+		font-size: 1rem;
+	}
 `
 
 export const SubH1 = styled.p`
@@ -125,4 +142,7 @@ export const NavbarText = styled.p`
 export const DefaultText = styled.p`
 	font-size: 1rem;
 	color: var(--second-color);
+	@media screen and (max-width: 600px) {
+		font-size: 0.9rem;
+	}
 `
