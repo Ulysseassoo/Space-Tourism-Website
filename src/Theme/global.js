@@ -95,6 +95,8 @@ export const H1 = styled.h1`
 export const H2 = styled.h2`
 	font-family: "Bellefair", serif;
 	font-size: 6.25rem;
+	text-transform: uppercase;
+	color: var(--third-color);
 `
 
 export const H3 = styled.h3`
@@ -124,12 +126,14 @@ export const H5 = styled.h5`
 export const SubH1 = styled.p`
 	font-family: "Bellefair", serif;
 	font-size: 1.75rem;
+	color: var(--third-color);
 `
 
 export const SubH2 = styled.p`
 	font-family: "Barlow Condensed", sans-serif;
 	font-size: 0.875rem;
 	letter-spacing: 2.35px;
+	color: var(--second-color);
 `
 
 export const NavbarText = styled.p`
