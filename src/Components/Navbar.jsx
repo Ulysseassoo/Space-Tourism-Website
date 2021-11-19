@@ -15,19 +15,19 @@ const Navbar = () => {
 		<Container>
 			<Logo src={LogoImage} alt="space website logo" />
 			<NavLinks activeMobile={activeMobile}>
-				<Link to="/">
+				<Link to="/" onClick={() => setActiveMobile(false)}>
 					<Index>00</Index>
 					<NavbarText>Home</NavbarText>
 				</Link>
-				<Link to="/destination">
+				<Link to="/destination" onClick={() => setActiveMobile(false)}>
 					<Index>01</Index>
 					<NavbarText>Destination</NavbarText>
 				</Link>
-				<Link to="/crew">
+				<Link to="/crew" onClick={() => setActiveMobile(false)}>
 					<Index>02</Index>
 					<NavbarText>Crew</NavbarText>
 				</Link>
-				<Link to="/technology">
+				<Link to="/technology" onClick={() => setActiveMobile(false)}>
 					<Index>03</Index>
 					<NavbarText>Technology</NavbarText>
 				</Link>

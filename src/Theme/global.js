@@ -67,6 +67,11 @@ export const Container = styled(motion.section)`
 	min-height: 100vh;
 	background: ${({ image }) => (image ? `url(${image})` : "")};
 	background-size: cover;
+	@media screen and (max-width: 600px) {
+		background: ${({ mobileImage }) => (mobileImage ? `url(${mobileImage})` : "")};
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 `
 
 export const H1 = styled.h1`
