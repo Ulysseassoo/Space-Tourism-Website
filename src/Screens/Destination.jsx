@@ -69,6 +69,9 @@ const Flex = styled.div`
 	padding: 0 6rem;
 	display: flex;
 	flex-direction: column;
+	@media screen and (max-width: 900px) {
+		height: 85%;
+	}
 `
 const TabName = styled.p`
 	padding: 0.5rem;
@@ -110,6 +113,10 @@ const Title = styled.h2`
 	letter-spacing: 0.3rem;
 	text-transform: uppercase;
 	color: var(--third-color);
+	@media screen and (max-width: 900px) {
+		font-size: 1.1rem;
+		margin: 0;
+	}
 `
 const Index = styled.p`
 	font-weight: bold;
@@ -121,6 +128,9 @@ const Content = styled.div`
 	align-items: center;
 	height: 100%;
 	gap: 3rem;
+	@media screen and (max-width: 900px) {
+		flex-direction: column;
+	}
 `
 const Image = styled.img`
 	object-fit: contain;
@@ -134,6 +144,9 @@ const Center = styled.div`
 	justify-content: center;
 	align-items: center;
 	height: 350px;
+	@media screen and (max-width: 900px) {
+		height: 30%;
+	}
 `
 const CenterColumn = styled.div`
 	flex: 1;
@@ -143,11 +156,22 @@ const CenterColumn = styled.div`
 	padding: 0 0 2rem 0;
 	gap: 2rem;
 	justify-content: space-between;
+	@media screen and (max-width: 900px) {
+		flex-direction: column;
+		align-items: center;
+	}
 `
 const Tabs = styled.div`
 	display: flex;
 `
-const Text = styled.div``
+const Text = styled.div`
+	@media screen and (max-width: 900px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+`
 const Line = styled.span`
 	width: 80%;
 	display: block;
@@ -157,6 +181,9 @@ const Line = styled.span`
 `
 const Specifics = styled.div`
 	display: flex;
+	@media screen and (max-width: 900px) {
+		width: 100%;
+	}
 `
 const Box = styled.div`
 	flex: 1;

@@ -97,6 +97,9 @@ export const H2 = styled.h2`
 	font-size: 6.25rem;
 	text-transform: uppercase;
 	color: var(--third-color);
+	@media screen and (max-width: 900px) {
+		font-size: 4rem;
+	}
 `
 
 export const H3 = styled.h3`
@@ -127,6 +130,9 @@ export const SubH1 = styled.p`
 	font-family: "Bellefair", serif;
 	font-size: 1.75rem;
 	color: var(--third-color);
+	@media screen and (max-width: 900px) {
+		font-size: 1.25rem;
+	}
 `
 
 export const SubH2 = styled.p`
@@ -134,6 +140,9 @@ export const SubH2 = styled.p`
 	font-size: 0.875rem;
 	letter-spacing: 2.35px;
 	color: var(--second-color);
+	@media screen and (max-width: 900px) {
+		font-size: 0.6rem;
+	}
 `
 
 export const NavbarText = styled.p`
