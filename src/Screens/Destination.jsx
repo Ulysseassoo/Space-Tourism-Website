@@ -72,6 +72,9 @@ const Flex = styled.div`
 	@media screen and (max-width: 900px) {
 		height: 85%;
 	}
+	@media screen and (max-width: 600px) {
+		padding: 0;
+	}
 `
 const TabName = styled.p`
 	padding: 0.5rem;
@@ -116,6 +119,9 @@ const Title = styled.h2`
 	@media screen and (max-width: 900px) {
 		font-size: 1.1rem;
 		margin: 0;
+	}
+	@media screen and (max-width: 600px) {
+		justify-content: center;
 	}
 `
 const Index = styled.p`
@@ -183,6 +189,9 @@ const Specifics = styled.div`
 	display: flex;
 	@media screen and (max-width: 900px) {
 		width: 100%;
+	}
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
 	}
 `
 const Box = styled.div`
