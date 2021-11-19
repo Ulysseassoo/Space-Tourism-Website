@@ -1,10 +1,15 @@
 import styled, { createGlobalStyle } from "styled-components"
+import { motion } from "framer-motion"
 
 export const GlobalStyles = createGlobalStyle`
 :root {
 	--first-color: #0B0D17;
 	--second-color: #D0D6F9;
 	--third-color: #FFFFFF;
+}
+
+body {
+	background-color: black;
 }
 
 * {
@@ -58,7 +63,7 @@ a {
 }
 `
 
-export const Container = styled.section`
+export const Container = styled(motion.section)`
 	min-height: 100vh;
 	background: ${({ image }) => (image ? `url(${image})` : "")};
 	background-size: cover;
