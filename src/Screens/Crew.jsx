@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 import { Container, DefaultText } from "../Theme/global"
 import Background from "../assets/crew/background-crew-desktop.jpg"
 import BackgroundMobile from "../assets/crew/background-crew-mobile.jpg"
@@ -17,6 +17,8 @@ import "swiper/css/effect-creative"
 SwiperCore.use([Pagination, EffectCreative])
 
 const Crew = () => {
+	const paginationRef = React.useRef(null)
+
 	return (
 		<CrewContainer
 			image={Background}
@@ -36,6 +38,7 @@ const Crew = () => {
 						pagination={{ clickable: true }}
 						effect={"creative"}
 						grabCursor={true}
+						pagination={{ el: paginationRef.current }}
 						creativeEffect={{
 							prev: {
 								shadow: true,
@@ -45,7 +48,12 @@ const Crew = () => {
 							next: {
 								translate: ["100%", 0, 0]
 							}
+						}}
+						onBeforeInit={(swiper) => {
+							swiper.params.pagination.el = paginationRef.current
 						}}>
+						<SwiperBullets ref={paginationRef} />
+
 						{Data.crew.map((value, index) => {
 							return (
 								<SwiperSlide key={index}>
@@ -71,6 +79,11 @@ const SwiperContainer = styled(Swiper)`
 	margin: 0;
 	width: 100%;
 `
+
+const SwiperBullets = styled.div`
+	position: absolute;
+`
+const Bullet = styled.span``
 
 const Flex = styled.div`
 	height: 75%;
@@ -113,6 +126,9 @@ const SliderContainer = styled.div`
 	height: 100%;
 	@media screen and (max-width: 900px) {
 		flex-direction: column;
+	}
+	@media screen and (max-width: 600px) {
+		padding: 2rem 1rem;
 	}
 `
 export default Crew

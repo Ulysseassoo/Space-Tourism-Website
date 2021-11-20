@@ -66,6 +66,12 @@ a {
 .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
 	bottom: 70px;
 	width: initial;
+	@media screen and (max-width: 900px) {
+		bottom: 0;
+		top: 30vh;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 }
 .swiper-pagination-bullet {
 	background: rgba(255,255,255,0.17);
@@ -118,11 +124,23 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
 	font-family: "Bellefair", serif;
 	font-size: 3.5rem;
+	@media screen and (max-width: 900px) {
+		font-size: 2.5rem;
+	}
+	@media screen and (max-width: 600px) {
+		font-size: 2.1rem;
+	}
 `
 
 export const H4 = styled.h4`
 	font-family: "Bellefair", serif;
 	font-size: 2rem;
+	@media screen and (max-width: 900px) {
+		font-size: 1.5rem;
+	}
+	@media screen and (max-width: 600px) {
+		font-size: 1.25rem;
+	}
 `
 
 export const H5 = styled.h5`
