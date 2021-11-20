@@ -6,6 +6,8 @@ export const GlobalStyles = createGlobalStyle`
 	--first-color: #0B0D17;
 	--second-color: #D0D6F9;
 	--third-color: #FFFFFF;
+	--swiper-pagination-bullet-height: 12px;
+	--swiper-pagination-bullet-size: 12px;
 }
 
 body {
@@ -60,6 +62,17 @@ table {
 }
 a {
 	text-decoration: none;
+}
+.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+	bottom: 70px;
+	width: initial;
+}
+.swiper-pagination-bullet {
+	background: rgba(255,255,255,0.17);
+
+}
+.swiper-pagination-bullet-active {
+	background: var(--third-color);
 }
 `
 
