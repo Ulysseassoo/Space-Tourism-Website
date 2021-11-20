@@ -4,7 +4,7 @@ import Background from "../assets/destination/background-destination-desktop.jpg
 import BackgroundMobile from "../assets/destination/background-destination-mobile.jpg"
 import BackgroundTablet from "../assets/destination/background-destination-tablet.jpg"
 import styled, { css } from "styled-components"
-import Data from "../data.json"
+import { Data } from "../data"
 
 const Destination = () => {
 	const [activeTab, setActiveTab] = useState(0)
