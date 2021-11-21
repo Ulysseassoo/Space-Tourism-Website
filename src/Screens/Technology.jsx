@@ -97,12 +97,12 @@ const Navigation = styled.div`
 	flex-direction: column;
 	gap: 2rem;
 	height: 90%;
-	order: 2;
 	justify-content: center;
 	@media screen and (max-width: 900px) {
 		flex-direction: row;
 		width: 100%;
 		height: 20%;
+		order: 2;
 	}
 `
 const Circle = styled.button`
