@@ -49,7 +49,7 @@ const BodyText = styled(DefaultText)`
 		text-align: center;
 	}
 	@media screen and (max-width: 600px) {
-		font-size: 0.9rem;
+		font-size: 0.7rem;
 	}
 `
 const ImageContainer = styled.div`
