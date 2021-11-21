@@ -53,6 +53,7 @@ const Flex = styled.div`
 	flex-direction: column;
 	@media screen and (max-width: 900px) {
 		height: 85%;
+		padding: 0;
 	}
 	@media screen and (max-width: 600px) {
 		padding: 0;
@@ -69,7 +70,7 @@ const Title = styled.h2`
 	color: var(--third-color);
 	@media screen and (max-width: 900px) {
 		font-size: 1.1rem;
-		margin: 0;
+		margin-left: 2rem;
 	}
 	@media screen and (max-width: 600px) {
 		justify-content: center;
@@ -85,6 +86,9 @@ const SliderContainer = styled.div`
 	flex: 1;
 	display: flex;
 	gap: 2rem;
+	@media screen and (max-width: 900px) {
+		flex-direction: column-reverse;
+	}
 `
 const Navigation = styled.div`
 	width: 20%;
@@ -93,7 +97,13 @@ const Navigation = styled.div`
 	flex-direction: column;
 	gap: 2rem;
 	height: 90%;
+	order: 2;
 	justify-content: center;
+	@media screen and (max-width: 900px) {
+		flex-direction: row;
+		width: 100%;
+		height: 20%;
+	}
 `
 const Circle = styled.button`
 	border-radius: 50%;
@@ -107,6 +117,10 @@ const Circle = styled.button`
 	outline: transparent;
 	&:hover {
 		border: 1px solid var(--third-color);
+	}
+	@media screen and (max-width: 900px) {
+		height: 50px;
+		width: 50px;
 	}
 	${({ index, activeSlide }) =>
 		index === activeSlide &&
