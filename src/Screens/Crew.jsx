@@ -82,8 +82,11 @@ const SwiperContainer = styled(Swiper)`
 
 const SwiperBullets = styled.div`
 	position: absolute;
+	bottom: 50px !important;
+	@media screen and (max-width: 900px) {
+		display: none;
+	}
 `
-const Bullet = styled.span``
 
 const Flex = styled.div`
 	height: 75%;
